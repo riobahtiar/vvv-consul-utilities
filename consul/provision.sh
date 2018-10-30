@@ -1,25 +1,9 @@
 #!/usr/bin/env bash
 echo "## Prepare to Install Consul ##"
-
-# Install prerequisites.
-package_install() {
-	# Install unzip
-	echo -e "\nInstalling Unzip.."
-	sudo apt-get -y install unzip
-	# Install Consul Node..
-	if [[ ! -f "/usr/local/bin/consul" ]]; then
-		echo -e "\nDownloading Consul 1.3.0, consul_1.3.0_linux_amd64.zip"
-		wget https://releases.hashicorp.com/consul/1.3.0/consul_1.3.0_linux_amd64.zip
-		sudo unzip consul_1.3.0_linux_amd64.zip -d /usr/local/bin
-		rm -rf consul_1.3.0_linux_amd64.zip
-	else
-		echo "Consul already installed."
-	fi
-}
-
-configure() {
-	sudo service consul restart
-}
-
-package_install
-configure
+echo -e "\nInstalling Unzip.."
+sudo apt-get -y install unzip
+echo -e "\nDownloading Consul 1.3.0, consul_1.3.0_linux_amd64.zip"
+wget https://releases.hashicorp.com/consul/1.3.0/consul_1.3.0_linux_amd64.zip
+sudo unzip consul_1.3.0_linux_amd64.zip -d /usr/local/bin
+rm -rf consul_1.3.0_linux_amd64.zip
+sudo service consul restart
