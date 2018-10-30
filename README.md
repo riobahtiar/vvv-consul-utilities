@@ -1,5 +1,5 @@
-# VVV Consul Utilities
-[![Build Status](https://travis-ci.com/riobahtiar/vvv-consul-utilities.svg?branch=master)](https://travis-ci.com/riobahtiar/vvv-consul-utilities)
+# VVV Consul Utilities    [![Build Status](https://travis-ci.com/riobahtiar/vvv-consul-utilities.svg?branch=master)](https://travis-ci.com/riobahtiar/vvv-consul-utilities)
+
 Utility to install Consul as part of provisioning in Varying Vagrant Vagrants.
 
 ## Varying Vagrant Vagrants
